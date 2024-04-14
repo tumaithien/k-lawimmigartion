@@ -1,0 +1,122 @@
+.blaze-prev, .blaze-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 6px;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(50,57,63,.45);
+    transition: all 0.2s linear;
+    .fa {
+        font-size: 30px;
+        color: $secondary-color;
+    }
+    &:hover, &:focus, &:active {
+        background-color: $primary-color;
+    }
+}
+
+.blaze-prev {
+    left: 5%;
+}
+
+.blaze-next {
+    right: 5%;
+}
+.blaze-block {
+    position: relative;
+}
+
+.blaze-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+
+    h2 {
+        font-size: 50px;
+    }
+    p {
+        font-size: 22px;
+        font-family: "PT Serif", serif;
+        margin-bottom: 30px;
+    }
+}
+.blaze-title h3{
+    font-size: 33px;
+    display: inline-block;
+
+    &::after, &::before {
+        content: "";
+        opacity: 0.36;
+        display: inline-block;
+        width: 44px;
+        border-bottom: 1px solid $primary-color;
+        top: 50%;
+        transform: translateY(-50%);
+        vertical-align: middle;
+    }
+
+    &::before {
+        left: 0;
+        margin-right: 12px;
+    }
+
+    &::after {
+        right: 0;
+        margin-left: 12px;
+    }
+}
+.slider {
+    position: relative;
+}
+.form-contact-slider {
+    background-color: #F2F3F8;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10%;
+    padding: 30px 20px;
+    max-width: 300px;
+    width: 100%;
+
+    .form-input, .form-text-area {
+        border: unset;
+        outline: unset;
+        background-color: $secondary-color;
+        padding: 8px 5px;
+    }
+    .form-text-area, .text-wrap {
+        width: 100%;
+    }
+
+    .form-row {
+        display: flex;
+        gap: 10px;
+        + .form-row {
+            margin-top: 30px;
+        }
+    }
+    .form-col {
+        width: 50%;
+        input {
+            width: 100%;
+        }
+    }
+
+    .form-row > .form-wrap, .form-row > .form-wrap input {
+        width: 100%;
+    }
+
+    .button-wrapper {
+        margin-top: 30px;
+    }
+
+    .button-wrapper .button-primary{
+        width: 100%;
+    }
+}
+.blaze-block img {
+    width: 100%;
+}

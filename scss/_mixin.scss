@@ -1,0 +1,14 @@
+@mixin maxW($breakpoint) {
+    @media screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+@mixin minW($breakpoint) {
+  @media screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+@function remCalc($pxValue, $baseFontSize: 16px) {
+  @return calc($pxValue / $baseFontSize) + rem;
+}

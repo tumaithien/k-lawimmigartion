@@ -1,0 +1,106 @@
+.form-bottom {
+    background-color: #f2f3f8;
+    h3 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 45px;
+        line-height: 1;
+    }
+    form {
+        width: 40%;
+        margin: 0 auto;
+        padding: 0 60px;
+    }
+    .form-row {
+        display: flex;
+        gap: 30px;
+        + .form-row {
+            margin-top: 30px;
+        }
+    }
+    .form-col {
+        width: 50%;
+        input {
+            width: 100%;
+        }
+    }
+    .form-wrap {
+        height: 100%;
+        .select2-container {
+            width: 100% !important;
+            height: 100%;
+        }
+        .select2-container--default .select2-selection--single {
+            border: unset;
+            height: 100%;
+        }
+        .selection {
+            display: block;
+            height: 100%;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__rendered {
+            height: 100%;
+            padding-left: 20px;
+            line-height: 54px;
+            color: #9f9f9f;
+        }
+        .select2-container--default .select2-selection--single .select2-selection__arrow {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            border-color: $primary-color transparent transparent transparent;
+        }
+        .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+            border-color: transparent transparent $primary-color transparent;
+        }
+    }
+
+    input {
+        border: unset;
+        outline: unset;
+        background-color: $secondary-color;
+        padding: 15px 20px;
+        border-radius: 4px;
+
+        &::-webkit-input-placeholder{
+        color:#9f9f9f;
+        }
+        &::-moz-input-placeholder{
+        color:#9f9f9f;
+        }
+    }
+
+    .text-wrap {
+        width: 100%;
+    }
+
+    .form-text-area {
+        width: 100%;
+        border: unset;
+        outline: unset;
+        background-color: $secondary-color;
+        margin-bottom: 30px;
+        padding: 15px 20px;
+        border-radius: 4px;
+        &::-webkit-input-placeholder{
+            color:#9f9f9f;
+        }
+        &::-moz-input-placeholder{
+            color:#9f9f9f;
+        }
+    }
+    .button-wrapper {
+        text-align: center;
+        .button-primary {
+            width: 50%;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
+}
+
+.select2-dropdown {
+    border: unset;
+}

@@ -1,0 +1,90 @@
+.box-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+.box-item {
+    width: 33.3333%;
+    padding: 67px 40px 61px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    max-width: 308px;
+    
+    &::after, &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% - 35px);
+        height: calc(100% - 35px);
+        pointer-events: none;
+        border: 1px solid #e5e7e9;
+        transition: 0.33s;
+    }
+
+    &::before {
+        top: 0;
+        left: 0;
+        border-width: 1px 0 0 1px;
+    }
+
+    &::after {
+        bottom: 0;
+        right: 0;
+        border-width: 0 1px 1px 0;
+    }
+
+    &:hover, &:focus, &:active {
+        &::after, &::before {
+            border-color: $primary-color;
+            width: 100%;
+            height: 100%;
+        }
+        .divider {
+            width: 168px;
+        }
+    }
+
+}
+.box-top {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    row-gap: 10px;
+}
+.box-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i.fa {
+        font-size: 50px;
+        color: $primary-color;
+    }
+}
+
+.box-header {
+    a {
+        color: $gray-dark;
+    }
+    h5 {
+        font-size: 22px;
+    }
+}
+.divider {
+    width: 49px;
+    max-width: 100%;
+    transition: all 0.3s linear;
+    height: 2px;
+    margin: 13px auto;
+}
+.box-body {
+    p {
+        color: $gray;
+    }
+}

@@ -1,0 +1,2 @@
+cd scss
+run  sass ./app.scss ../css/app.css --watch
