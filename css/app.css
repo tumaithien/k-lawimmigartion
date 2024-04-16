@@ -226,6 +226,18 @@ hr {
   word-break: break-word;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.gap-spacing {
+  gap: 5px;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
 .form-bottom {
   background-color: #f2f3f8;
 }
