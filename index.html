@@ -40,7 +40,7 @@
       <hr />
       <div class="container" data-menu>
         <div class="header-nav">
-          <a href="#" class="logo">
+          <a href="/" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
           </a>
           <ul class="header-nav-menu">
@@ -48,26 +48,26 @@
               <a href="/" class="nav-menu-link">Home</a>
             </li>
             <li class="nav-menu-item">
-              <a href="/about-us.html" class="nav-menu-link">About Us</a>
+              <a href="./about-us.html" class="nav-menu-link">About Us</a>
             </li>
             <li class="nav-menu-item">
-              <a href="/immigration.html" class="nav-menu-link">Immigration <i class="fa fa-sort-down"></i></a>
+              <a href="./immigration.html" class="nav-menu-link">Immigration <i class="fa fa-sort-down"></i></a>
               <div class="header-nav-subMenu">
                 <ul>
                   <li class="nav-subMenu-item">
-                    <a href="/immigration-list.html" class="nav-subMenu-item">Canada</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item">Canada</a>
                   </li>
                   <li class="nav-subMenu-item">
-                    <a href="/immigration-list.html" class="nav-subMenu-item">United Kingdom</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item">United Kingdom</a>
                   </li>
                   <li class="nav-subMenu-item">
-                    <a href="/immigration-list.html" class="nav-subMenu-item">Việt Nam</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item">Việt Nam</a>
                   </li>
                 </ul>
               </div>
             </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link">Legal</a>
+              <a href="./immigration.html" class="nav-menu-link">Legal</a>
             </li>
             <li class="nav-menu-item">
               <a href="./immigration-list.html" class="nav-menu-link">Article</a>
@@ -517,6 +517,8 @@
     <script src="./script/app.js"></script>
     <script>
       AOS.init();
+      const elSlider = document.querySelector('.blaze-slider');
+      new BlazeSlider(elSlider);
     </script>
   </body>
 </html>
