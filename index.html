@@ -18,16 +18,19 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="">
       <div class="container">
         <div class="top-header">
           <div class="language-selector">
-            <select id="language">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-            </select>
+            <div class="selected-language" id="selectedLanguage" onclick="toggleOptions()">Select Language</div>
             <i class="fa fa-sort-down"></i>
+            <div class="language-options" id="languageOptions">
+              <ul>
+                <li onclick="selectLanguage('english')">English</li>
+                <li onclick="selectLanguage('vietnam')">Việt Nam</li>
+              </ul>
+              
+            </div>
           </div>
           <div class="top-header-contact">
             <a href="tel:7077170400">
@@ -38,7 +41,7 @@
         </div>
       </div>
       <hr />
-      <div class="container" data-menu>
+      <div class="container language-block english" data-menu>
         <div class="header-nav">
           <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
@@ -51,29 +54,37 @@
               <a href="./about-us.html" class="nav-menu-link">About Us</a>
             </li>
             <li class="nav-menu-item">
-              <a href="./immigration.html" class="nav-menu-link">Immigration <i class="fa fa-sort-down"></i></a>
+              <a href="./immigration.html" class="nav-menu-link"
+                >Immigration <i class="fa fa-sort-down"></i
+              ></a>
               <div class="header-nav-subMenu">
                 <ul>
                   <li class="nav-subMenu-item">
-                    <a href="./immigration-list.html" class="nav-subMenu-item">Canada</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
                   </li>
                   <li class="nav-subMenu-item">
-                    <a href="./immigration-list.html" class="nav-subMenu-item">United Kingdom</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >United States</a
+                    >
                   </li>
                   <li class="nav-subMenu-item">
-                    <a href="./immigration-list.html" class="nav-subMenu-item">Việt Nam</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Australia</a
+                    >
                   </li>
                 </ul>
               </div>
             </li>
             <li class="nav-menu-item">
-              <a href="./immigration.html" class="nav-menu-link">Legal</a>
+              <a href="./legal.html" class="nav-menu-link">Legal</a>
             </li>
             <li class="nav-menu-item">
               <a href="./immigration-list.html" class="nav-menu-link">Article</a>
             </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link">Contacts</a>
+              <a href="./contact-us.html" class="nav-menu-link">Contacts</a>
             </li>
             <li class="nav-menu-item">
               <a href="#" class="button button-outline">Appointment</a>
@@ -81,6 +92,57 @@
           </ul>
         </div>
       </div>
+      <div class="container language-block vietnam" data-menu>
+        <div class="header-nav">
+          <a href="./" class="logo">
+            <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
+          </a>
+          <ul class="header-nav-menu">
+            <li class="nav-menu-item">
+              <a href="./" class="nav-menu-link">Trang chủ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./about-us.html" class="nav-menu-link">Về chúng tôi</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration.html" class="nav-menu-link"
+                >Nhập cư <i class="fa fa-sort-down"></i
+              ></a>
+              <div class="header-nav-subMenu">
+                <ul>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Mỹ</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Úc</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./legal.html" class="nav-menu-link">Pháp lý</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration-list.html" class="nav-menu-link">Tin tức</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./contact-us.html" class="nav-menu-link">Liên hệ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="button button-outline">Đặt lịch hẹn</a>
+            </li>
+          </ul>
+        </div>
+      </div>    
     </header>
     <section class="slider">
       <div class="blaze-slider">
@@ -219,7 +281,7 @@
               <p>H-1B and L visas, PERM or Labor Certification and Investment based immigration.</p>
             </div>
           </article>
-          <article class="box-item">
+          <!-- <article class="box-item">
             <div class="box-top">
               <div class="box-icon">
                 <i class="fa fa-briefcase"></i>
@@ -250,7 +312,7 @@
             <div class="box-body">
               <p>H-1B and L visas, PERM or Labor Certification and Investment based immigration.</p>
             </div>
-          </article>
+          </article> -->
         </div>
       </div>
     </section>
@@ -290,211 +352,7 @@
         <p>• <b><a href="#" target="_blank">Family-based immigration and green cards</a></b>– full legal options to sponsor your family members to obtain permanent residency in the United States. We will prepare all the necessary paperwork for the U.S. consulate or embassy interview abroad if you want to invite your loved one for just a visit to the USA by requesting a "visitor visa," or our green card lawyers will prepare a green card application on your family member's behalf. </p>
       </div>
     </section>
-    <footer id="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-item">
-            <a href="#" class="footer-brand" target="_self">
-              <img src="./img/logo-small.jpg" alt="Logo">
-            </a>
-            <p class="text-gray-light">If you or your business is facing a immigration legal challenge that calls for sound advice and skilled representation, contact us today to arrange a consultation with an attorney.</p>
-              <a href="#" class="text-link text-link-custom--right">
-                <span class="text-16">Request Consultation</span>
-                <i class="fa fa-angle-right text-primary"></i>
-              </a>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-title text-secondary">
-              LOCATIONS
-            </h4>
-            <!-- <div class="footer-row">
-              <div class="footer-col">
-                <ul class="footer-list">
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>San Francisco</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Beverly Hills</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Sacramento</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Santa Rosa</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>San Rafael</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <ul class="footer-list">
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Napa</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Vallejo</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Bishop</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Ukiah</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Reno</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div> -->
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.190150061411!2d-118.37821222595902!3d34.06463951707846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2b94a78e5cf81%3A0x38b3fe3ea9f43ac2!2s8484%20Wilshire!5e0!3m2!1svi!2s!4v1713245577966!5m2!1svi!2s" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-          <div class="footer-item">
-            <h4 class="footer-title text-secondary">
-              QUICK LINKS
-            </h4>
-            <div class="footer-row">
-              <div class="footer-col">
-                <ul class="footer-list">
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Home</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Practices</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Careers</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Blog</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Check Case Status (USCIS)</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-              <div class="footer-col">
-                <ul class="footer-list">
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>About us</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Contacts</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Appointment</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>en Español</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" class="text-link text-link-custom--left">
-                      <i class="fa fa-angle-right text-primary"></i>
-                      <span>Processing Times (USCIS)</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-item">
-            <div class="footer-title text-secondary">CONTACT US</div>
-            <strong class="text-secondary font-bold">Beverly Hill/Los Angeles Office</strong>
-            <p class="text-secondary">8484 Wilshire Blvd 430 Beverly Hill, CA 90211</p>
-            <span class="d-flex text-secondary gap-spacing">Telephone: <a class="text-link" href="tel:3017170200">(301) 717-0200</a></span>
-            
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <hr>
-      </div>
-      <div class="footer-bottom">
-        <div class="container">
-          <div class="footer-row">
-            <div class="footer-col">
-              <p class="text-secondary">
-                <span>2024</span>
-                <span>&nbsp;©&nbsp;</span>
-                <span>K &amp; G Law, LLP&nbsp;</span>
-              </p>
-            </div>
-            <div class="footer-col text-right">
-              <p class="font-italic text-secondary">Follow Us:</p>
-              <ul class="footer-contact-list">
-                <li>
-                  <a href="#" target="_self" class="footer-contact-link">
-                    <i class="fa fa-facebook"></i>
-                  </a>
-                </li>
-                <li>
-                  <a href="#" target="_self" class="footer-contact-link">
-                    <i class="fa fa-twitter"></i>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <footer id="footer"></footer>
     <script src="./blaze-slider/blaze-slider.min.js"></script>
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
@@ -504,6 +362,9 @@
       AOS.init();
       const elSlider = document.querySelector('.blaze-slider');
       new BlazeSlider(elSlider);
+      $(function() {
+        $("#footer").load("footer.html");
+      });
     </script>
   </body>
 </html>

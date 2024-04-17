@@ -135,3 +135,44 @@
     }
   }
 }
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+}
+
+.language-selector .selected-language {
+  padding: 10px 30px 10px 20px;
+  background-color: #ffffff;
+  border: 2px solid $primary-color;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.language-selector .language-options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+  width: 100%;
+}
+
+.language-selector .language-options ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.language-selector .language-options li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.language-selector .language-options li:hover {
+  background-color: #f0f0f0;
+}
