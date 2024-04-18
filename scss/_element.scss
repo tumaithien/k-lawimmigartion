@@ -3,6 +3,11 @@
     width: inherit;
     margin: 0 auto;
     padding: 0 16px;
+
+    @media (max-width: 801px) {
+        width: 100%;
+        max-width: unset;
+    }
 }
 .button-outline {
     border: 2px solid $primary-color;

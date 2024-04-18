@@ -68,6 +68,12 @@ p + p {
   margin: 0 auto;
   padding: 0 16px;
 }
+@media (max-width: 801px) {
+  .container {
+    width: 100%;
+    max-width: unset;
+  }
+}
 
 .button-outline {
   border: 2px solid #CCA876;
