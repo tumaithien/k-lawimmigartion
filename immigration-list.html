@@ -27,16 +27,19 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="">
       <div class="container">
         <div class="top-header">
           <div class="language-selector">
-            <select id="language">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-            </select>
+            <div class="selected-language" id="selectedLanguage" onclick="toggleOptions()">Select Language</div>
             <i class="fa fa-sort-down"></i>
+            <div class="language-options" id="languageOptions">
+              <ul>
+                <li onclick="selectLanguage('english')">English</li>
+                <li onclick="selectLanguage('vietnam')">Việt Nam</li>
+              </ul>
+              
+            </div>
           </div>
           <div class="top-header-contact">
             <a href="tel:7077170400">
@@ -47,7 +50,7 @@
         </div>
       </div>
       <hr />
-      <div class="container" data-menu>
+      <div class="container language-block english" data-menu>
         <div class="header-nav">
           <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
@@ -97,12 +100,63 @@
             </li>
           </ul>
         </div>
-      </div>      
+      </div>
+      <div class="container language-block vietnam" data-menu>
+        <div class="header-nav">
+          <a href="./" class="logo">
+            <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
+          </a>
+          <ul class="header-nav-menu">
+            <li class="nav-menu-item">
+              <a href="./" class="nav-menu-link">Trang chủ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./about-us.html" class="nav-menu-link">Về chúng tôi</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration.html" class="nav-menu-link"
+                >Nhập cư <i class="fa fa-sort-down"></i
+              ></a>
+              <div class="header-nav-subMenu">
+                <ul>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Mỹ</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Úc</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./legal.html" class="nav-menu-link">Pháp lý</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration-list.html" class="nav-menu-link">Tin tức</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./contact-us.html" class="nav-menu-link">Liên hệ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="button button-outline">Đặt lịch hẹn</a>
+            </li>
+          </ul>
+        </div>
+      </div>    
     </header>
     <section class="bg-img">
       <div class="container">
         <div class="page-title">
-          <div class="page-title-inner">
+          <div class="page-title-inner language-block english">
             <div class="page-title-left">
               <h2>Immigration</h2>
               <h2>Immigration</h2>
@@ -169,11 +223,78 @@
               <h2>Immigration</h2>
             </div>
           </div>
+          <div class="page-title-inner language-block vietnam">
+            <div class="page-title-left">
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+            </div>
+            <div class="page-title-center"><h1>Nhập cư</h1></div>
+            <div class="page-title-right">
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+              <h2>Nhập cư</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="section-padding">
-      <div class="container">
+      <div class="container language-block english">
         <div class="immigration-title">
           <h2>Canada Immigration</h2>
           <p>
@@ -282,7 +403,81 @@
         </div>
         <div class="pagination">
           <button class="page-btn" id="prevBtn"><i class="fa fa-angle-left"></i></button>
-          <button class="page-btn">1</button>
+          <button class="page-btn is-active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn">4</button>
+          <button class="page-btn" id="nextBtn"><i class="fa fa-angle-right"></i></button>
+      </div>
+      </div>
+      <div class="container language-block vietnam">
+        <div class="immigration-title">
+          <h2>Nhập cư Canada</h2>
+          <p>
+            Canada, nổi tiếng với cảnh quan tuyệt đẹp, xã hội đa văn hóa và chất lượng cuộc sống cao, mang đến nhiều trải nghiệm phong phú cho cư dân của mình. Từ dãy núi Rocky hùng vĩ đến cuộc sống thành phố nhộn nhịp của Toronto và khung cảnh văn hóa sôi động ở Montreal, Canada mang đến nhiều môi trường và cơ hội đa dạng. Với nền kinh tế vững mạnh, hệ thống chăm sóc sức khỏe toàn dân và cam kết hòa nhập, Canada nuôi dưỡng bầu không khí chào đón mọi người từ mọi tầng lớp xã hội. Cho dù đó là khám phá những khung cảnh ngoài trời tuyệt vời, thưởng thức ẩm thực đẳng cấp thế giới hay đắm mình trong nghệ thuật, Canada đều mang đến một lối sống năng động và trọn vẹn cho cư dân của mình.
+          </p>
+        </div>
+        <div class="immigration-article-list">
+          <div class="immigration-article-item">
+            <a href="./article-details.html" class="immigration-article-img">
+              <img src="./img/image-article.png" alt="Article" />
+            </a>
+            <div class="immigration-article-desc">
+              <div class="immigration-article-title">
+                <h3><a href="./article-details.html" target="_self">Bảo lãnh gia đình</a></h3>
+                <p class="text-desc-more">
+                  Chương trình Bảo lãnh Gia đình của Canada là nền tảng trong chính sách nhập cư của nước này, cho phép công dân và thường trú nhân Canada bảo lãnh cho các thành viên gia đình của họ nhập cư vào Canada. Chương trình này nhằm mục đích đoàn tụ các gia đình bằng cách cho phép các nhà tài trợ đủ điều kiện đưa vợ/chồng, vợ chồng, con cái phụ thuộc, cha mẹ và ông bà của họ đến Canada. Thông qua sự bảo trợ của gia đình, các cá nhân có thể xây dựng và củng cố mối quan hệ gia đình, nuôi dưỡng cảm giác thân thuộc và hỗ trợ ở quê hương mới của họ.
+                </p>
+              </div>
+              <div class="immigration-article-date">Ngày: 09/09/2024</div>
+            </div>
+          </div>
+          <div class="immigration-article-item">
+            <a href="./article-details.html" class="immigration-article-img">
+              <img src="./img/image-article.png" alt="Article" />
+            </a>
+            <div class="immigration-article-desc">
+              <div class="immigration-article-title">
+                <h3><a href="./article-details.html" target="_self">Bảo lãnh gia đình</a></h3>
+                <p class="text-desc-more">
+                  Chương trình Bảo lãnh Gia đình của Canada là nền tảng trong chính sách nhập cư của nước này, cho phép công dân và thường trú nhân Canada bảo lãnh cho các thành viên gia đình của họ nhập cư vào Canada. Chương trình này nhằm mục đích đoàn tụ các gia đình bằng cách cho phép các nhà tài trợ đủ điều kiện đưa vợ/chồng, vợ chồng, con cái phụ thuộc, cha mẹ và ông bà của họ đến Canada. Thông qua sự bảo trợ của gia đình, các cá nhân có thể xây dựng và củng cố mối quan hệ gia đình, nuôi dưỡng cảm giác thân thuộc và hỗ trợ ở quê hương mới của họ.
+                </p>
+              </div>
+              <div class="immigration-article-date">Ngày: 09/09/2024</div>
+            </div>
+          </div>
+          <div class="immigration-article-item">
+            <a href="./article-details.html" class="immigration-article-img">
+              <img src="./img/image-article.png" alt="Article" />
+            </a>
+            <div class="immigration-article-desc">
+              <div class="immigration-article-title">
+                <h3><a href="./article-details.html" target="_self">Bảo lãnh gia đình</a></h3>
+                <p class="text-desc-more">
+                  Chương trình Bảo lãnh Gia đình của Canada là nền tảng trong chính sách nhập cư của nước này, cho phép công dân và thường trú nhân Canada bảo lãnh cho các thành viên gia đình của họ nhập cư vào Canada. Chương trình này nhằm mục đích đoàn tụ các gia đình bằng cách cho phép các nhà tài trợ đủ điều kiện đưa vợ/chồng, vợ chồng, con cái phụ thuộc, cha mẹ và ông bà của họ đến Canada. Thông qua sự bảo trợ của gia đình, các cá nhân có thể xây dựng và củng cố mối quan hệ gia đình, nuôi dưỡng cảm giác thân thuộc và hỗ trợ ở quê hương mới của họ.
+                </p>
+              </div>
+              <div class="immigration-article-date">Ngày: 09/09/2024</div>
+            </div>
+          </div>
+          <div class="immigration-article-item">
+            <a href="./article-details.html" class="immigration-article-img">
+              <img src="./img/image-article.png" alt="Article" />
+            </a>
+            <div class="immigration-article-desc">
+              <div class="immigration-article-title">
+                <h3><a href="./article-details.html" target="_self">Bảo lãnh gia đình</a></h3>
+                <p class="text-desc-more">
+                  Chương trình Bảo lãnh Gia đình của Canada là nền tảng trong chính sách nhập cư của nước này, cho phép công dân và thường trú nhân Canada bảo lãnh cho các thành viên gia đình của họ nhập cư vào Canada. Chương trình này nhằm mục đích đoàn tụ các gia đình bằng cách cho phép các nhà tài trợ đủ điều kiện đưa vợ/chồng, vợ chồng, con cái phụ thuộc, cha mẹ và ông bà của họ đến Canada. Thông qua sự bảo trợ của gia đình, các cá nhân có thể xây dựng và củng cố mối quan hệ gia đình, nuôi dưỡng cảm giác thân thuộc và hỗ trợ ở quê hương mới của họ.
+                </p>
+              </div>
+              <div class="immigration-article-date">Ngày: 09/09/2024</div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <button class="page-btn" id="prevBtn"><i class="fa fa-angle-left"></i></button>
+          <button class="page-btn is-active">1</button>
           <button class="page-btn">2</button>
           <button class="page-btn">3</button>
           <button class="page-btn">4</button>
@@ -290,7 +485,7 @@
       </div>
       </div>
     </section>
-    <section class="form-bottom section-padding">
+    <section class="form-bottom section-padding language-block english">
       <h3>Request a Consultation</h3>
       <form action="">
         <div class="form-row">
@@ -342,6 +537,58 @@
         </div>
       </form>
     </section>
+    <section class="form-bottom section-padding language-block vietnam">
+      <h3>Yêu cầu tư vấn</h3>
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="text" class="form-input" placeholder="Họ" />
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="text" class="form-input" placeholder="Tên" />
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="email" class="form-input" placeholder="Email" />
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-wrap">
+              <select id="request-form-select-vn">
+                <option value="Family Immigration">Nhập cư gia đình</option>
+                <option value="Business Immigration">
+                  Nhập cư kinh doanh
+                </option>
+                <option value="Deportation Defense">Bảo vệ trục xuất</option>
+                <option value="Other Immigration Help">
+                  Trợ giúp nhập cư khác
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="text-wrap">
+            <textarea
+              class="form-text-area"
+              name="test"
+              id="test"
+              rows="5"
+              placeholder="Tin nhắn"
+            ></textarea>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="button button-primary">Yêu cầu tư vấn</button>
+        </div>
+      </form>
+    </section>
     <footer id="footer"></footer>
     <script src="./blaze-slider/blaze-slider.min.js"></script>
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -351,6 +598,9 @@
     <script>
       AOS.init();
       $("#request-form-select").select2({
+        minimumResultsForSearch: -1,
+      });
+      $('#request-form-select-vn').select2({
         minimumResultsForSearch: -1,
       });
       $(function() {

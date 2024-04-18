@@ -27,16 +27,19 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="">
       <div class="container">
         <div class="top-header">
           <div class="language-selector">
-            <select id="language">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-            </select>
+            <div class="selected-language" id="selectedLanguage" onclick="toggleOptions()">Select Language</div>
             <i class="fa fa-sort-down"></i>
+            <div class="language-options" id="languageOptions">
+              <ul>
+                <li onclick="selectLanguage('english')">English</li>
+                <li onclick="selectLanguage('vietnam')">Việt Nam</li>
+              </ul>
+              
+            </div>
           </div>
           <div class="top-header-contact">
             <a href="tel:7077170400">
@@ -47,42 +50,50 @@
         </div>
       </div>
       <hr />
-      <div class="container" data-menu>
+      <div class="container language-block english" data-menu>
         <div class="header-nav">
-          <a href="/" class="logo">
+          <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
           </a>
           <ul class="header-nav-menu">
             <li class="nav-menu-item">
-              <a href="/" class="nav-menu-link">Home</a>
+              <a href="./" class="nav-menu-link">Home</a>
             </li>
             <li class="nav-menu-item">
-              <a href="/about-us.html" class="nav-menu-link">About Us</a>
+              <a href="./about-us.html" class="nav-menu-link">About Us</a>
             </li>
             <li class="nav-menu-item">
-              <a href="/immigration.html" class="nav-menu-link">Immigration <i class="fa fa-sort-down"></i></a>
+              <a href="./immigration.html" class="nav-menu-link"
+                >Immigration <i class="fa fa-sort-down"></i
+              ></a>
               <div class="header-nav-subMenu">
                 <ul>
                   <li class="nav-subMenu-item">
-                    <a href="/immigration-list.html" class="nav-subMenu-item">Canada</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
                   </li>
                   <li class="nav-subMenu-item">
-                    <a href="/immigration-list.html" class="nav-subMenu-item">United Kingdom</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >United States</a
+                    >
                   </li>
                   <li class="nav-subMenu-item">
-                    <a href="/immigration-list.html" class="nav-subMenu-item">Việt Nam</a>
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Australia</a
+                    >
                   </li>
                 </ul>
               </div>
             </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link">Legal</a>
+              <a href="./legal.html" class="nav-menu-link">Legal</a>
             </li>
             <li class="nav-menu-item">
               <a href="./immigration-list.html" class="nav-menu-link">Article</a>
             </li>
             <li class="nav-menu-item">
-              <a href="#" class="nav-menu-link">Contacts</a>
+              <a href="./contact-us.html" class="nav-menu-link">Contacts</a>
             </li>
             <li class="nav-menu-item">
               <a href="#" class="button button-outline">Appointment</a>
@@ -90,11 +101,62 @@
           </ul>
         </div>
       </div>
+      <div class="container language-block vietnam" data-menu>
+        <div class="header-nav">
+          <a href="./" class="logo">
+            <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
+          </a>
+          <ul class="header-nav-menu">
+            <li class="nav-menu-item">
+              <a href="./" class="nav-menu-link">Trang chủ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./about-us.html" class="nav-menu-link">Về chúng tôi</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration.html" class="nav-menu-link"
+                >Nhập cư <i class="fa fa-sort-down"></i
+              ></a>
+              <div class="header-nav-subMenu">
+                <ul>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Mỹ</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Úc</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./legal.html" class="nav-menu-link">Pháp lý</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration-list.html" class="nav-menu-link">Tin tức</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./contact-us.html" class="nav-menu-link">Liên hệ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="button button-outline">Đặt lịch hẹn</a>
+            </li>
+          </ul>
+        </div>
+      </div>    
     </header>
     <section class="bg-img">
       <div class="container">
         <div class="page-title">
-          <div class="page-title-inner">
+          <div class="page-title-inner language-block english">
             <div class="page-title-left">
               <h2>Legal</h2>
               <h2>Legal</h2>
@@ -161,6 +223,73 @@
               <h2>Legal</h2>
             </div>
           </div>
+          <div class="page-title-inner language-block vietnam">
+            <div class="page-title-left">
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+            </div>
+            <div class="page-title-center"><h1>Pháp lý</h1></div>
+            <div class="page-title-right">
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+              <h2>Pháp lý</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -168,23 +297,29 @@
       <div class="container">
         <div class="box-immigration-procedure">
           <img src="./img/canada-immigration.png" alt="Canada immigration" />
-          <div class="box-immigration-content">
+          <div class="box-immigration-content language-block english">
             <h2>Immigration procedure</h2>
             <p class="text-gray-light">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Obcaecati quae, fugiat vitae omnis inventore iure at deserunt
-              culpa ullam corrupti ipsum vel sapiente consequuntur, a veritatis,
-              harum magnam animi impedit.
+              Every client's immigration case is different. Our immigration attorneys represent clients in a whole variety of US immigration law areas,
+              including immigration for individuals & families, businesses & investors, employment-based immigration, asylum & deportation defense, non-immigarion
+              visas, as well as very "special situations" to meet our client immigration needs with custom-tailor legal strategy for your specific needs. 
             </p>
             <p class="text-gray-light">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-              explicabo unde maxime consequatur quo hic sit numquam, laborum aut
-              quibusdam? Consequuntur nulla saepe ipsum totam rerum doloremque
-              id mollitia dolorem.
+              We have been helping thousands of immigrants with their legal needs for over 30 year. We can help you as well; please schedule a consultation with
+              our immigration attorney to get a professional review of your specific situation and the options available to you.
+            </p>
+          </div>
+          <div class="box-immigration-content language-block vietnam">
+            <h2>Thủ tục nhập cảnh</h2>
+            <p class="text-gray-light">
+              Trường hợp nhập cư của mỗi khách hàng là khác nhau. Luật sư di trú của chúng tôi đại diện cho khách hàng trong nhiều lĩnh vực luật nhập cư của Hoa Kỳ, bao gồm nhập cư cho cá nhân và gia đình, doanh nghiệp và nhà đầu tư, nhập cư dựa trên việc làm, bào chữa tị nạn và trục xuất, thị thực không nhập cư, cũng như các "tình huống đặc biệt" đối với đáp ứng nhu cầu nhập cư của khách hàng với chiến lược pháp lý được thiết kế riêng cho nhu cầu cụ thể của bạn.
+            </p>
+            <p class="text-gray-light">
+              Chúng tôi đã giúp đỡ hàng nghìn người nhập cư về các nhu cầu pháp lý của họ trong hơn 30 năm. Chúng tôi cũng có thể giúp bạn; vui lòng lên lịch tư vấn với luật sư nhập cư của chúng tôi để nhận được đánh giá chuyên nghiệp về tình huống cụ thể của bạn và các lựa chọn có sẵn cho bạn.
             </p>
           </div>
         </div>
-        <div class="immigration-list">
+        <div class="immigration-list language-block english">
           <div class="immigration-item">
             <h3>Canada</h3>
             <p>
@@ -198,7 +333,7 @@
               atmosphere for people from all walks of life. Whether it's
               exploring the great outdoors, enjoying world-class cuisine, or
               immersing oneself in the arts, Canada offers a dynamic and
-              fulfilling way of life for its inhabitants.
+              fulfilling way of life for its inhabitants
             </p>
             <div class="button-wrapper text-center">
               <a href="/immigration-list.html" class="button-primary button">Immigration to Canada</a>
@@ -224,9 +359,29 @@
             </div>
           </div>
         </div>
+        <div class="immigration-list language-block vietnam">
+          <div class="immigration-item">
+            <h3>Canada</h3>
+            <p>
+              Canada, nổi tiếng với cảnh quan tuyệt đẹp, xã hội đa văn hóa và chất lượng cuộc sống cao, mang đến nhiều trải nghiệm phong phú cho cư dân của mình. Từ dãy núi Rocky hùng vĩ đến cuộc sống thành phố nhộn nhịp của Toronto và khung cảnh văn hóa sôi động ở Montreal, Canada mang đến nhiều môi trường và cơ hội đa dạng. Với nền kinh tế vững mạnh, hệ thống chăm sóc sức khỏe toàn dân và cam kết hòa nhập, Canada nuôi dưỡng bầu không khí chào đón mọi người từ mọi tầng lớp xã hội. Cho dù đó là khám phá những khung cảnh ngoài trời tuyệt vời, thưởng thức ẩm thực đẳng cấp thế giới hay đắm mình trong nghệ thuật, Canada đều mang đến cho người dân một lối sống năng động và trọn vẹn.
+            </p>
+            <div class="button-wrapper text-center">
+              <a href="/immigration-list.html" class="button-primary button">Nhập cư vào Canada</a>
+            </div>
+          </div>
+          <div class="immigration-item">
+            <h3>Mỹ</h3>
+            <p>
+              Canada, nổi tiếng với cảnh quan tuyệt đẹp, xã hội đa văn hóa và chất lượng cuộc sống cao, mang đến nhiều trải nghiệm phong phú cho cư dân của mình. Từ dãy núi Rocky hùng vĩ đến cuộc sống thành phố nhộn nhịp của Toronto và khung cảnh văn hóa sôi động ở Montreal, Canada mang đến nhiều môi trường và cơ hội đa dạng. Với nền kinh tế vững mạnh, hệ thống chăm sóc sức khỏe toàn dân và cam kết hòa nhập, Canada nuôi dưỡng bầu không khí chào đón mọi người từ mọi tầng lớp xã hội. Cho dù đó là khám phá những khung cảnh ngoài trời tuyệt vời, thưởng thức ẩm thực đẳng cấp thế giới hay đắm mình trong nghệ thuật, Canada đều mang đến cho người dân một lối sống năng động và trọn vẹn
+            </p>
+            <div class="button-wrapper text-center">
+              <a href="/immigration-list.html" class="button-primary button">Nhập cư vào USA</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="form-bottom section-padding">
+    <section class="form-bottom section-padding language-block english">
       <h3>Request a Consultation</h3>
       <form action="">
         <div class="form-row">
@@ -278,6 +433,58 @@
         </div>
       </form>
     </section>
+    <section class="form-bottom section-padding language-block vietnam">
+      <h3>Yêu cầu tư vấn</h3>
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="text" class="form-input" placeholder="Họ" />
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="text" class="form-input" placeholder="Tên" />
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="email" class="form-input" placeholder="Email" />
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-wrap">
+              <select id="request-form-select-vn">
+                <option value="Family Immigration">Nhập cư gia đình</option>
+                <option value="Business Immigration">
+                  Nhập cư kinh doanh
+                </option>
+                <option value="Deportation Defense">Bảo vệ trục xuất</option>
+                <option value="Other Immigration Help">
+                  Trợ giúp nhập cư khác
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="text-wrap">
+            <textarea
+              class="form-text-area"
+              name="test"
+              id="test"
+              rows="5"
+              placeholder="Tin nhắn"
+            ></textarea>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="button button-primary">Yêu cầu tư vấn</button>
+        </div>
+      </form>
+    </section>
     <footer id="footer"></footer>
     <script src="./blaze-slider/blaze-slider.min.js"></script>
     <script src="https://cdn-script.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -287,6 +494,9 @@
     <script>
       AOS.init();
       $("#request-form-select").select2({
+        minimumResultsForSearch: -1,
+      });
+      $('#request-form-select-vn').select2({
         minimumResultsForSearch: -1,
       });
       $(function() {

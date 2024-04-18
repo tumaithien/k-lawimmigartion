@@ -179,7 +179,7 @@ hr {
     background-color: #D9D9D9;
 }
 
-.page-btn:hover {
+.page-btn:hover, .page-btn.is-active {
     background-color: #CCA876;
     color: #fff;
 }

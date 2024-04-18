@@ -24,16 +24,19 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="">
       <div class="container">
         <div class="top-header">
           <div class="language-selector">
-            <select id="language">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-            </select>
+            <div class="selected-language" id="selectedLanguage" onclick="toggleOptions()">Select Language</div>
             <i class="fa fa-sort-down"></i>
+            <div class="language-options" id="languageOptions">
+              <ul>
+                <li onclick="selectLanguage('english')">English</li>
+                <li onclick="selectLanguage('vietnam')">Việt Nam</li>
+              </ul>
+              
+            </div>
           </div>
           <div class="top-header-contact">
             <a href="tel:7077170400">
@@ -44,7 +47,7 @@
         </div>
       </div>
       <hr />
-      <div class="container" data-menu>
+      <div class="container language-block english" data-menu>
         <div class="header-nav">
           <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
@@ -94,12 +97,63 @@
             </li>
           </ul>
         </div>
-      </div>      
+      </div>
+      <div class="container language-block vietnam" data-menu>
+        <div class="header-nav">
+          <a href="./" class="logo">
+            <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
+          </a>
+          <ul class="header-nav-menu">
+            <li class="nav-menu-item">
+              <a href="./" class="nav-menu-link">Trang chủ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./about-us.html" class="nav-menu-link">Về chúng tôi</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration.html" class="nav-menu-link"
+                >Nhập cư <i class="fa fa-sort-down"></i
+              ></a>
+              <div class="header-nav-subMenu">
+                <ul>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Mỹ</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Úc</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./legal.html" class="nav-menu-link">Pháp lý</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration-list.html" class="nav-menu-link">Tin tức</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./contact-us.html" class="nav-menu-link">Liên hệ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="button button-outline">Đặt lịch hẹn</a>
+            </li>
+          </ul>
+        </div>
+      </div>    
     </header>
     <section class="bg-img">
       <div class="container">
         <div class="page-title">
-          <div class="page-title-inner">
+          <div class="page-title-inner language-block english">
             <div class="page-title-left">
               <h2>About K &amp; G Immigration Law</h2>
               <h2>About K &amp; G Immigration Law</h2>
@@ -166,12 +220,79 @@
               <h2>About K &amp; G Immigration Law</h2>
             </div>
           </div>
+          <div class="page-title-inner language-block vietnam">
+            <div class="page-title-left">
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+            </div>
+            <div class="page-title-center"><h1>Về K & G Immigration Law</h1></div>
+            <div class="page-title-right">
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+              <h2>Về K &amp; G Immigration Law</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="section-padding">
       <div class="container">
-        <div class="about-us-content">
+        <div class="about-us-content language-block english">
           <h2>Who We Are</h2>
           <div class="about-us-text">
             <p>At K & G Immigration Law, we specialize only in US Immigration Law – so we're the experts in what we do.</p>
@@ -185,11 +306,25 @@
             <p>We helped thousands of our clients to win their immigration cases and have been serving immigrant communities in California and Nevada since 1989.</p>
           </div>
         </div>
+        <div class="about-us-content language-block vietnam">
+          <h2>Chúng tôi là ai</h2>
+          <div class="about-us-text">
+            <p>Tại Luật Di trú K & G, chúng tôi chỉ chuyên về Luật Di trú Hoa Kỳ - vì vậy chúng tôi là chuyên gia trong lĩnh vực mình làm.</p>
+            <p>Được thành lập vào năm 1989 bởi <a href="#" target="_self" class="text-link2">Christopher Kerosky</a> and <a href="#" target="_self" class="text-link2">Susanna Bogue</a>, công ty luật của chúng tôi đã phát triển vượt bậc trong 35 năm qua. Chúng tôi bắt đầu chỉ với một văn phòng ở San Francisco nhưng hiện có mạng lưới văn phòng toàn diện khắp California và Nevada. Chúng tôi tự hào về thành công của mình trong ba thập kỷ qua và mong muốn cung cấp các dịch vụ pháp lý nhập cư xuất sắc cho khách hàng của mình.</p>
+            <p>Các dịch vụ pháp lý của chúng tôi cung cấp phạm vi bao quát toàn diện về tất cả các lĩnh vực liên quan đến Nhập cư, Thị thực và Nhập tịch Hoa Kỳ. Chúng tôi cung cấp hỗ trợ trong việc nộp đơn, lấy tài liệu, điều hướng quá trình nhập cư, hiểu luật nhập cư, kháng cáo các đơn đăng ký bị từ chối và cung cấp tư vấn pháp lý về các vấn đề thị thực và nhập tịch.</p>
+            <p>Chúng tôi cũng hướng dẫn quyền công dân và tình trạng thường trú, thủ tục trục xuất và các vấn đề nhập cư theo gia đình. Ngoài ra, chúng tôi có thể hỗ trợ soạn thảo các văn bản pháp luật và đại diện cho khách hàng tại tòa án di trú liên bang. Các luật sư và nhân viên nhập cư giàu kinh nghiệm của chúng tôi cam kết giúp đỡ khách hàng định hướng quá trình nhập cư và đạt được kết quả mong muốn.</p>
+            <p>Chúng tôi cung cấp đại diện pháp lý về nhập cư cho các cá nhân, gia đình, doanh nghiệp và xí nghiệp, nhà đầu tư và các tình huống liên quan đến việc làm, cũng như biện hộ đáng tin cậy về việc trục xuất tại tòa án nhập cư (EOIR), USCIS, ICE và DHS.</p>
+            <p>Chúng tôi không coi mình chỉ đơn giản là 'luật sư nhập cư' mà sẽ luôn cố gắng trở thành cố vấn đáng tin cậy của khách hàng, cho dù trong bối cảnh thương mại hay cá nhân. Chúng tôi cũng cung cấp các dịch vụ bổ sung ngoài luật nhập cư - bao gồm các giải pháp pháp lý doanh nghiệp, thỏa thuận kinh doanh và kiện tụng, luật di sản, quỹ tín thác và cứu trợ sau khi kết án cho người nhập cư.</p>
+            <p>Chúng tôi rất vui được gặp bạn trực tiếp tại một trong các văn phòng của chúng tôi. Để thuận tiện cho khách hàng ở California, chúng tôi có văn phòng tại San Francisco, Los Angeles, Sacramento, Santa Rosa, San Rafael / Marin County, Napa, Vallejo, Ukiah và Bishop / Mammoth Lakes. Dành cho cư dân Nevada có văn phòng tại Reno, Nevada, dành cho khách hàng từ vùng Sierra Nevada/Lake Tahoe.</p>
+            <p>Nếu bạn không thể đến một trong các văn phòng của chúng tôi để gặp mặt trực tiếp, không vấn đề gì! Chúng tôi cung cấp tư vấn ảo qua Zoom, Skype hoặc Facetime cho khách hàng ở Hoa Kỳ và nước ngoài trong giờ làm việc thông thường. Hãy gọi cho chúng tôi để đặt lịch tư vấn cá nhân với một trong các luật sư nhập cư của chúng tôi.</p>
+            <p>Chúng tôi đã giúp hàng nghìn khách hàng của mình thắng kiện trong các vụ kiện nhập cư và đã phục vụ các cộng đồng người nhập cư ở California và Nevada kể từ năm 1989.</p>
+          </div>
+        </div>
       </div>
     </section>
     <section class="section-padding pt-0">
       <div class="container">
-        <div class="box-expert">
+        <div class="box-expert language-block english">
           <div class="box-expert-item">
             <div class="box-expert-thumbnail">
               <figure class="box-expert-thumbnail-img">
@@ -247,47 +382,167 @@
             </div>
           </div>
         </div>
+        <div class="box-expert language-block vietnam">
+          <div class="box-expert-item">
+            <div class="box-expert-thumbnail">
+              <figure class="box-expert-thumbnail-img">
+                <img src="./img/attorney-christopher-kerosky.jpg" alt="Christopher Kerosky, Immigration Lawyer " width="246" height="300">
+              </figure>
+              <div class="thumbnail-inner">
+                <div class="link-group">
+                  <i class="fa fa-phone"></i>
+                  <a class="link-white" href="#" target="_self">(415) 777-4445</a>
+                </div>
+                <div class="link-group">
+                  <i class="fa fa-envelope-o"></i>
+                  <a class="link-white" href="#" target="_self">info@legalkg.com</a>
+                </div>
+              </div>
+              <div class="thumnail-caption">
+                <p class="text-header">
+                  <a href="#" target="_blank">Christopher Kerosky</a>
+                </p>
+                <div class="divider-md bg-teak"></div>
+                <p class="text-caption">Luật sư nhập cư</p>
+              </div>
+            </div>
+            <div class="box-expert-content">
+              <p>Nhóm đằng sau "Luật Nhập cư K & G" là hai luật sư nhập cư hàng đầu (Liliana Gallelli và Jean Pierre Gallelli), các luật sư thời vụ bổ sung và nhiều trợ lý pháp lý để cung cấp dịch vụ toàn diện cho khách hàng của chúng tôi. Những luật sư và trợ lý pháp lý này giúp đỡ khách hàng về các nhu cầu nhập cư hàng ngày của họ, chẳng hạn như nộp hồ sơ giấy tờ, trả lời các câu hỏi của chính phủ và nộp đơn.</p>
+              <p>Nhóm đằng sau "Luật Nhập cư K & G" là hai luật sư nhập cư hàng đầu (Liliana Gallelli và Jean Pierre Gallelli), các luật sư thời vụ bổ sung và nhiều trợ lý pháp lý để cung cấp dịch vụ toàn diện cho khách hàng của chúng tôi. Những luật sư và trợ lý pháp lý này giúp đỡ khách hàng về các nhu cầu nhập cư hàng ngày của họ, chẳng hạn như nộp hồ sơ giấy tờ, trả lời các câu hỏi của chính phủ và nộp đơn.</p>
+            </div>
+          </div>
+          <div class="box-expert-item">
+            <div class="box-expert-thumbnail">
+              <figure class="box-expert-thumbnail-img">
+                <img src="./img/attorney-christopher-kerosky.jpg" alt="Christopher Kerosky, Immigration Lawyer " width="246" height="300">
+              </figure>
+              <div class="thumbnail-inner">
+                <div class="link-group">
+                  <i class="fa fa-phone"></i>
+                  <a class="link-white" href="#" target="_self">(415) 777-4445</a>
+                </div>
+                <div class="link-group">
+                  <i class="fa fa-envelope-o"></i>
+                  <a class="link-white" href="#" target="_self">info@legalkg.com</a>
+                </div>
+              </div>
+              <div class="thumnail-caption">
+                <p class="text-header">
+                  <a href="#" target="_blank">Christopher Kerosky</a>
+                </p>
+                <div class="divider-md bg-teak"></div>
+                <p class="text-caption">Luật sư nhập cư</p>
+              </div>
+            </div>
+            <div class="box-expert-content">
+              <p>Nhóm đằng sau "Luật Nhập cư K & G" là hai luật sư nhập cư hàng đầu (Liliana Gallelli và Jean Pierre Gallelli), các luật sư thời vụ bổ sung và nhiều trợ lý pháp lý để cung cấp dịch vụ toàn diện cho khách hàng của chúng tôi. Những luật sư và trợ lý pháp lý này giúp đỡ khách hàng về các nhu cầu nhập cư hàng ngày của họ, chẳng hạn như nộp hồ sơ giấy tờ, trả lời các câu hỏi của chính phủ và nộp đơn.</p>
+              <p>Nhóm đằng sau "Luật Nhập cư K & G" là hai luật sư nhập cư hàng đầu (Liliana Gallelli và Jean Pierre Gallelli), các luật sư thời vụ bổ sung và nhiều trợ lý pháp lý để cung cấp dịch vụ toàn diện cho khách hàng của chúng tôi. Những luật sư và trợ lý pháp lý này giúp đỡ khách hàng về các nhu cầu nhập cư hàng ngày của họ, chẳng hạn như nộp hồ sơ giấy tờ, trả lời các câu hỏi của chính phủ và nộp đơn.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
-    <section class="form-bottom section-padding">
+    <section class="form-bottom section-padding language-block english">
       <h3>Request a Consultation</h3>
       <form action="">
         <div class="form-row">
           <div class="form-col">
             <div class="form-wrap">
-              <input type="text" class="form-input" placeholder="Name">
+              <input type="text" class="form-input" placeholder="Name" />
             </div>
           </div>
           <div class="form-col">
             <div class="form-wrap">
-              <input type="text" class="form-input" placeholder="Last name">
+              <input type="text" class="form-input" placeholder="Last name" />
             </div>
           </div>
         </div>
         <div class="form-row">
           <div class="form-col">
             <div class="form-wrap">
-              <input type="email" class="form-input" placeholder="Email">
+              <input type="email" class="form-input" placeholder="Email" />
             </div>
           </div>
           <div class="form-col">
             <div class="form-wrap">
               <select id="request-form-select">
                 <option value="Family Immigration">Family Immigration</option>
-                <option value="Business Immigration">Business Immigration</option>
+                <option value="Business Immigration">
+                  Business Immigration
+                </option>
                 <option value="Deportation Defense">Deportation Defense</option>
-                <option value="Other Immigration Help">Other Immigration Help</option>
+                <option value="Other Immigration Help">
+                  Other Immigration Help
+                </option>
               </select>
             </div>
           </div>
         </div>
         <div class="form-row">
           <div class="text-wrap">
-            <textarea class="form-text-area" name="test" id="test" rows="5" placeholder="Message"></textarea>
+            <textarea
+              class="form-text-area"
+              name="test"
+              id="test"
+              rows="5"
+              placeholder="Message"
+            ></textarea>
           </div>
         </div>
         <div class="button-wrapper">
           <button class="button button-primary">Request a Consultation</button>
+        </div>
+      </form>
+    </section>
+    <section class="form-bottom section-padding language-block vietnam">
+      <h3>Yêu cầu tư vấn</h3>
+      <form action="">
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="text" class="form-input" placeholder="Họ" />
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="text" class="form-input" placeholder="Tên" />
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <div class="form-wrap">
+              <input type="email" class="form-input" placeholder="Email" />
+            </div>
+          </div>
+          <div class="form-col">
+            <div class="form-wrap">
+              <select id="request-form-select-vn">
+                <option value="Family Immigration">Nhập cư gia đình</option>
+                <option value="Business Immigration">
+                  Nhập cư kinh doanh
+                </option>
+                <option value="Deportation Defense">Bảo vệ trục xuất</option>
+                <option value="Other Immigration Help">
+                  Trợ giúp nhập cư khác
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="text-wrap">
+            <textarea
+              class="form-text-area"
+              name="test"
+              id="test"
+              rows="5"
+              placeholder="Tin nhắn"
+            ></textarea>
+          </div>
+        </div>
+        <div class="button-wrapper">
+          <button class="button button-primary">Yêu cầu tư vấn</button>
         </div>
       </form>
     </section>
@@ -299,8 +554,11 @@
     <script src="./script/app.js"></script>
     <script>
       AOS.init();
-      $('#request-form-select').select2({
-        minimumResultsForSearch: -1
+      $("#request-form-select").select2({
+        minimumResultsForSearch: -1,
+      });
+      $('#request-form-select-vn').select2({
+        minimumResultsForSearch: -1,
       });
       $(function() {
         $("#footer").load("footer.html");

@@ -36,7 +36,7 @@ window.addEventListener('scroll', function() {
 
 // Function to toggle language options
 function toggleOptions() {
-  var options = document.getElementById("languageOptions");
+  let options = document.getElementById("languageOptions");
   if (options.style.display === "none" || options.style.display === "") {
     options.style.display = "block";
   } else {
@@ -58,7 +58,6 @@ function selectLanguage(language) {
   localStorage.setItem('selectedLanguage', language);
   // Close dropdown
   toggleOptions();
-  console.log(language);
   // Display selected language on selected-language block
   document.getElementById("selectedLanguage").textContent = language === "vietnam" ? "Việt Nam" : language.charAt(0).toUpperCase() + language.slice(1);
 }

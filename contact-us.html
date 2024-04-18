@@ -27,16 +27,19 @@
     <link rel="stylesheet" href="./css/app.css" />
   </head>
   <body>
-    <header id="header">
+    <header id="header" class="">
       <div class="container">
         <div class="top-header">
           <div class="language-selector">
-            <select id="language">
-              <option value="en">English</option>
-              <option value="fr">French</option>
-              <option value="es">Spanish</option>
-            </select>
+            <div class="selected-language" id="selectedLanguage" onclick="toggleOptions()">Select Language</div>
             <i class="fa fa-sort-down"></i>
+            <div class="language-options" id="languageOptions">
+              <ul>
+                <li onclick="selectLanguage('english')">English</li>
+                <li onclick="selectLanguage('vietnam')">Việt Nam</li>
+              </ul>
+              
+            </div>
           </div>
           <div class="top-header-contact">
             <a href="tel:7077170400">
@@ -47,7 +50,7 @@
         </div>
       </div>
       <hr />
-      <div class="container" data-menu>
+      <div class="container language-block english" data-menu>
         <div class="header-nav">
           <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
@@ -87,9 +90,7 @@
               <a href="./legal.html" class="nav-menu-link">Legal</a>
             </li>
             <li class="nav-menu-item">
-              <a href="./immigration-list.html" class="nav-menu-link"
-                >Article</a
-              >
+              <a href="./immigration-list.html" class="nav-menu-link">Article</a>
             </li>
             <li class="nav-menu-item">
               <a href="./contact-us.html" class="nav-menu-link">Contacts</a>
@@ -100,11 +101,62 @@
           </ul>
         </div>
       </div>
+      <div class="container language-block vietnam" data-menu>
+        <div class="header-nav">
+          <a href="./" class="logo">
+            <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
+          </a>
+          <ul class="header-nav-menu">
+            <li class="nav-menu-item">
+              <a href="./" class="nav-menu-link">Trang chủ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./about-us.html" class="nav-menu-link">Về chúng tôi</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration.html" class="nav-menu-link"
+                >Nhập cư <i class="fa fa-sort-down"></i
+              ></a>
+              <div class="header-nav-subMenu">
+                <ul>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Canada</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Mỹ</a
+                    >
+                  </li>
+                  <li class="nav-subMenu-item">
+                    <a href="./immigration-list.html" class="nav-subMenu-item"
+                      >Úc</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./legal.html" class="nav-menu-link">Pháp lý</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./immigration-list.html" class="nav-menu-link">Tin tức</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="./contact-us.html" class="nav-menu-link">Liên hệ</a>
+            </li>
+            <li class="nav-menu-item">
+              <a href="#" class="button button-outline">Đặt lịch hẹn</a>
+            </li>
+          </ul>
+        </div>
+      </div>    
     </header>
     <section class="bg-img">
       <div class="container">
         <div class="page-title">
-          <div class="page-title-inner">
+          <div class="page-title-inner language-block english">
             <div class="page-title-left">
               <h2>Contact us</h2>
               <h2>Contact us</h2>
@@ -171,11 +223,78 @@
               <h2>Contact us</h2>
             </div>
           </div>
+          <div class="page-title-inner language-block vietnam">
+            <div class="page-title-left">
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+            </div>
+            <div class="page-title-center"><h1>Liên hệ</h1></div>
+            <div class="page-title-right">
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+              <h2>Liên hệ</h2>
+            </div>
+          </div>
         </div>
       </div>
     </section>
     <section class="section-padding">
-      <div class="container">
+      <div class="container language-block english">
         <div class="box-contact-row">
           <div class="box-contact-left">
             <h2>How to Find Us</h2>
@@ -246,6 +365,75 @@
           </div>
         </div>
       </div>
+      <div class="container language-block vietnam">
+        <div class="box-contact-row">
+          <div class="box-contact-left">
+            <h2>Làm thế nào để liên hệ chúng tôi</h2>
+            <p>
+              Nếu bạn có bất kỳ câu hỏi nào, chỉ cần điền vào mẫu liên hệ và chúng tôi sẽ trả lời bạn ngay. Nếu bạn sống gần đó, vui lòng đặt lịch hẹn và đến thăm một trong những văn phòng tiện nghi của chúng tôi.
+            </p>
+            <h3>Địa chỉ California</h3>
+            <h4>Beverly Hill/Los Angeles Office</h4>
+            <p>8484 Wilshire Blvd 430<br> Beverly Hill, CA 90211</p>
+            <span class="d-flex gap-spacing">Telephone:
+              <a class="text-link text-gray-dark" href="tel:3017170200"
+                >(301) 717-0200</a
+              ></span
+            >
+          </div>
+          <div class="box-contact-right">
+            <h2>Yêu cầu tư vấn</h2>
+            <p class="text-gray">Vui lòng gửi tất cả các câu hỏi chung, ưu đãi dịch vụ hoặc sản phẩm và sơ yếu lý lịch của bạn đến địa chỉ email chính của chúng tôi - contact@kgimmigrationlaw.com</p>
+            <p class="text-gray">Khách hàng hiện tại - vui lòng gửi email trực tiếp đến người quản lý hồ sơ của bạn theo sự phân công (không sử dụng biểu mẫu này).</p>
+            <p class="text-gray">Biểu mẫu bên dưới chỉ dùng để lên lịch “Cuộc hẹn mới” (trong Văn phòng hoặc Ảo) và mọi loại tin nhắn khác sẽ tự động bị loại bỏ.</p>
+            <form action="" class="form-contact-us">
+              <div class="form-row">
+                <div class="form-col">
+                  <div class="form-wrap">
+                    <input type="text" class="form-input" placeholder="Họ" />
+                  </div>
+                </div>
+                <div class="form-col">
+                  <div class="form-wrap">
+                    <input type="text" class="form-input" placeholder="Tên" />
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-col">
+                  <div class="form-wrap">
+                    <input type="email" class="form-input" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="form-col">
+                  <div class="form-wrap">
+                    <select id="office-form-select-vn">
+                      <option value="Office Consultation">Tư vấn văn phòng</option>
+                      <option value="Virtual Consultation">
+                        Tư vấn qua điện thoại
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="text-wrap">
+                  <textarea
+                    class="form-text-area"
+                    name="test"
+                    id="test"
+                    maxlength="250"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+              </div>
+              <div class="button-wrapper">
+                <button class="button button-primary">Yêu cầu tư vấn</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
     <footer id="footer"></footer>
     <script src="./blaze-slider/blaze-slider.min.js"></script>
@@ -256,6 +444,9 @@
     <script>
       AOS.init();
       $("#office-form-select").select2({
+        minimumResultsForSearch: -1,
+      });
+      $("#office-form-select-vn").select2({
         minimumResultsForSearch: -1,
       });
       $(function () {
