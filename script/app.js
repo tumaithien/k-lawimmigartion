@@ -25,14 +25,24 @@ const select = (el, all = false) => {
     }
   };
 const headerHeight = select('[data-menu]').offsetHeight;
-console.log(headerHeight)
 window.addEventListener('scroll', function() {
     if (this.window.scrollY > headerHeight) {
         select('[data-menu]').classList.add('sticky');
+        select('[data-menu-vn]').classList.add('sticky');
     } else if (this.window.scrollY === 0) {
         select('[data-menu]').classList.remove('sticky');
+        select('[data-menu-vn]').classList.remove('sticky');
     }
 });
+
+function toggleMenu() {
+  $('.btn-toggle-menu').on('click', function() {
+    $('.header-nav-menu').toggleClass('_show');
+  });
+  $('._has-submenu-mobile .fa-sort-down').on('click', function() {
+    $('.header-nav-subMenu').toggleClass('_show');
+  })
+}
 
 // Function to toggle language options
 function toggleOptions() {
@@ -78,4 +88,5 @@ function applySelectedLanguage() {
 document.addEventListener("DOMContentLoaded", function() {
   applySelectedLanguage();
   toggleOptions();
+  toggleMenu();
 });

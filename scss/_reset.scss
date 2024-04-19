@@ -32,9 +32,14 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
-  min-width: 1200px;
   overflow-x: hidden;
   font-family: 'Lato';
+  min-width: 1200px;
+  width: 100%;
+
+  @media (max-width: 801px) {
+    min-width: unset;
+  }
 }
 a {
   text-decoration: none;

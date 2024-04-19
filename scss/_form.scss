@@ -7,7 +7,7 @@
         line-height: 1;
     }
     form {
-        width: 40%;
+        width: 50%;
         margin: 0 auto;
         padding: 0 60px;
     }
@@ -94,7 +94,7 @@
     .button-wrapper {
         text-align: center;
         .button-primary {
-            width: 50%;
+            width: 40%;
             font-weight: bold;
             font-size: 17px;
         }
@@ -103,4 +103,29 @@
 
 .select2-dropdown {
     border: unset;
+}
+
+@media (max-width: 1440px) {
+    .form-bottom .button-wrapper .button-primary {
+        width: 55%;
+    }
+}
+
+@media (max-width: 801px) {
+    .form-bottom form {
+        width: 100%;
+        padding: 0 16px;
+    }
+    .form-bottom h3 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 525px) {
+    .form-bottom .form-row {
+        flex-direction: column;
+    }
+    .form-bottom .form-col {
+        width: 100%;
+    }
 }

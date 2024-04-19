@@ -75,3 +75,43 @@
         margin-bottom: 30px;
     }
 }
+
+@media (max-width: 801px) {
+    .box-immigration-procedure{
+        flex-direction: column;
+
+        .box-immigration-content {
+            padding: 0;
+        }
+        h2 {
+            font-size: 35px;
+            text-align: center;
+        }
+    }
+
+    .immigration-item h3 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .immigration-title {
+        margin-bottom: 30px;
+    }
+
+    .immigration-title h2 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .immigration-article-list .immigration-article-item {
+        flex-direction: column;
+    }
+
+    .immigration-article-img img {
+        width: 100%;
+    }
+    .immigration-article-list .immigration-article-desc .immigration-article-date {
+        text-align: left;
+        margin-top: 10px;
+    }
+}

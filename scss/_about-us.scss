@@ -93,6 +93,7 @@
     padding: 66px 0 90px;
     background: url('../img/bg-image-1.jpg') center no-repeat;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .page-title {
@@ -258,5 +259,36 @@
         p + p {
             margin-top: 20px;
         }
+    }
+}
+
+@media (max-width: 801px) {
+    .box-cart {
+        padding: 40px 25px;
+    }
+    .blockquote-complex h3 {
+        font-size: 24px;
+    }
+    .box-cart-body {
+        padding-right: 0;
+    }
+
+    .page-title .page-title-center h1 {
+        font-size: 60px;
+    }
+
+    .box-expert-item {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .about-us-content h2 {
+        font-size: 35px;
+        margin-bottom: 1rem;
+    }
+
+    .about-us-text {
+        margin-top: 20px;
     }
 }

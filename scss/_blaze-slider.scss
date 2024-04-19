@@ -120,3 +120,45 @@
 .blaze-block img {
     width: 100%;
 }
+.my-structure {
+    display: block;
+}
+
+@media (max-width: 801px) {
+    .my-structure {
+        display: none;
+    }
+    .form-contact-slider {
+        position: unset;
+        transform: unset;
+        max-width: unset;
+    }
+    
+    .blaze-content {
+        padding: 0 50px;
+    }
+
+    .blaze-title h3 {
+        font-size: 20px;
+    }
+    .blaze-content h2 {
+        font-size: 24px;
+    }
+    .blaze-block .button-outline {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 525px) {
+    .blaze-title h3 {
+        font-size: 12px;
+    }
+    .blaze-content h2 {
+        font-size: 14px;
+    }
+    .blaze-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+}

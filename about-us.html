@@ -28,14 +28,19 @@
       <div class="container">
         <div class="top-header">
           <div class="language-selector">
-            <div class="selected-language" id="selectedLanguage" onclick="toggleOptions()">Select Language</div>
+            <div
+              class="selected-language"
+              id="selectedLanguage"
+              onclick="toggleOptions()"
+            >
+              Select Language
+            </div>
             <i class="fa fa-sort-down"></i>
             <div class="language-options" id="languageOptions">
               <ul>
                 <li onclick="selectLanguage('english')">English</li>
                 <li onclick="selectLanguage('vietnam')">Việt Nam</li>
               </ul>
-              
             </div>
           </div>
           <div class="top-header-contact">
@@ -49,6 +54,7 @@
       <hr />
       <div class="container language-block english" data-menu>
         <div class="header-nav">
+          <button class="btn-toggle-menu"><i class="fa fa-align-left"></i></button>
           <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
           </a>
@@ -60,9 +66,14 @@
               <a href="./about-us.html" class="nav-menu-link">About Us</a>
             </li>
             <li class="nav-menu-item">
+              <div class="_has-submenu-mobile">
+                <a href="./immigration.html" class="nav-menu-link"
+                  >Immigration </a>
+                  <i class="fa fa-sort-down"></i>
+              </div>
               <a href="./immigration.html" class="nav-menu-link"
-                >Immigration <i class="fa fa-sort-down"></i
-              ></a>
+                  >Immigration <i class="fa fa-sort-down"></i
+                ></a>
               <div class="header-nav-subMenu">
                 <ul>
                   <li class="nav-subMenu-item">
@@ -87,7 +98,9 @@
               <a href="./legal.html" class="nav-menu-link">Legal</a>
             </li>
             <li class="nav-menu-item">
-              <a href="./immigration-list.html" class="nav-menu-link">Article</a>
+              <a href="./immigration-list.html" class="nav-menu-link"
+                >Article</a
+              >
             </li>
             <li class="nav-menu-item">
               <a href="./contact-us.html" class="nav-menu-link">Contacts</a>
@@ -98,8 +111,9 @@
           </ul>
         </div>
       </div>
-      <div class="container language-block vietnam" data-menu>
+      <div class="container language-block vietnam" data-menu-vn>
         <div class="header-nav">
+          <button class="btn-toggle-menu"><i class="fa fa-align-left"></i></button>
           <a href="./" class="logo">
             <img src="./img/logo-small.jpg" alt="Logo" class="logo-image" />
           </a>
@@ -111,6 +125,11 @@
               <a href="./about-us.html" class="nav-menu-link">Về chúng tôi</a>
             </li>
             <li class="nav-menu-item">
+              <div class="_has-submenu-mobile">
+                <a href="./immigration.html" class="nav-menu-link"
+                  >Nhập cư </a>
+                  <i class="fa fa-sort-down"></i>
+              </div>
               <a href="./immigration.html" class="nav-menu-link"
                 >Nhập cư <i class="fa fa-sort-down"></i
               ></a>
@@ -138,7 +157,9 @@
               <a href="./legal.html" class="nav-menu-link">Pháp lý</a>
             </li>
             <li class="nav-menu-item">
-              <a href="./immigration-list.html" class="nav-menu-link">Tin tức</a>
+              <a href="./immigration-list.html" class="nav-menu-link"
+                >Tin tức</a
+              >
             </li>
             <li class="nav-menu-item">
               <a href="./contact-us.html" class="nav-menu-link">Liên hệ</a>
@@ -148,7 +169,7 @@
             </li>
           </ul>
         </div>
-      </div>    
+      </div>
     </header>
     <section class="bg-img">
       <div class="container">

@@ -88,3 +88,25 @@
         }
     }
 }
+
+@media (max-width: 801px) {
+    .box-contact-row {
+        flex-direction: column;
+        gap: 30px;
+        .box-contact-left {
+            width: 100%;
+        }
+        .box-contact-right {
+            width: 100%;
+        }
+    }
+
+    .box-contact-row .box-contact-left h2, .box-contact-row .box-contact-right h2 {
+        font-size: 35px;
+        margin-bottom: 1rem;
+    }
+
+    .box-contact-row .button-wrapper {
+        text-align: center;
+    }
+}
